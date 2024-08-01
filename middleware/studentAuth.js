@@ -41,7 +41,7 @@ const studentAuth = async (req, res, next) => {
     next(); // Continue to the next middleware or route handler
   } catch (error) {
     console.error("Error verifying token", error);
-    return res.status(500).json({ error: "Internal Server Error!" });
+    return res.status(401).json({ error: "Session token expired or invalid!" });
   }
 };
 

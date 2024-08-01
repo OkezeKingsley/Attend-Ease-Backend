@@ -270,7 +270,6 @@ const fetchAttendeesFunction = async (req, res) => {
         console.log("All Fetched Attendees", fetchedAttendees);
         return res.status(200).json(fetchedAttendees);
 
-
 	} catch (error) {
 		console.error("Internal Server Error:", error);
 		return res.status(500).json({ error: "Internal Server Error!"})
@@ -327,7 +326,6 @@ const addStudentFunction = async (req, res) => {
 
         console.log("Added student to Attendees", addedToAttendanceList);
         return res.status(200).json({ message: "Student added successfully!" });
-
 
 	} catch (error) {
 		console.error("Internal Server Error:", error);
